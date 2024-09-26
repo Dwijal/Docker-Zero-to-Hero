@@ -29,6 +29,10 @@ Containers and virtual machines are both technologies used to isolate applicatio
 
     4.  Management: Managing containers is typically easier than managing VMs, as containers are designed to be lightweight and fast-moving.
 
+    5. Each container has its separate IP address.
+
+    6. Image runs as independent process which has its own ram , cpu and disk space and network.
+
 
 
 ## Why are containers light weight ?
