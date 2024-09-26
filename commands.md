@@ -2,7 +2,7 @@
 
 Some of the most commonly used docker commands are 
 
-### 1) docker pull <image-name>:<version>
+### 1) docker pull image-name:version
 
 To pull the image from repo.
 
