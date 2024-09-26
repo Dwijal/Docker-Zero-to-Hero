@@ -27,11 +27,13 @@ Containers and virtual machines are both technologies used to isolate applicatio
 
     3. Security: VMs provide a higher level of security as each VM has its own operating system and can be isolated from the host and other VMs. Containers provide less isolation, as they share the host operating system.
 
-    4.  Management: Managing containers is typically easier than managing VMs, as containers are designed to be lightweight and fast-moving.
+    4.  Docker is Linux native so it requires Linux kernel . For windows using virtualization we have to launch the Linux VM and then use docker.
 
     5. Each container has its separate IP address.
 
     6. Image runs as independent process which has its own ram , cpu and disk space and network.
+
+    7. Container contain layers of images having base image as  Linux and top image as application image
 
 
 
