@@ -2,6 +2,14 @@
 
 Some of the most commonly used docker commands are 
 
+### 1) docker pull <image-name>:<version>
+
+To pull the image from repo.
+
+### 2)docker run <image-name>:<version>
+
+To pull the image and start the container
+
 ### docker images
 
 Lists docker images on the host machine.
