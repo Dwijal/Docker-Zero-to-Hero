@@ -7,49 +7,26 @@ of a Docker container is deleted/removed when the container dies.
 
 ## Solution
 
-There are 2 different ways how docker solves this problem.
 
-1. Volumes
-2. Bind Directory on a host as a Mount
+![Screenshot (2414)](https://github.com/user-attachments/assets/7206e01a-a7e9-4b9c-bb18-0cf4c705c86c)
 
-### Volumes 
+## Commands
 
-Volumes aims to solve the same problem by providing a way to store data on the host file system, separate from the container's file system, 
-so that the data can persist even if the container is deleted and recreated.
+#### - docker volume ls
 
-![image](https://user-images.githubusercontent.com/43399466/218018334-286d8949-d155-4d55-80bc-24827b02f9b1.png)
+List All Volumes:
 
+#### - docker volume inspect my-volume
 
-Volumes can be created and managed using the docker volume command. You can create a new volume using the following command:
+Inspect a Volume:
 
-```
-docker volume create <volume_name>
-```
+#### - docker volume rm my-volume
 
-Once a volume is created, you can mount it to a container using the -v or --mount option when running a docker run command. 
+Remove a Volume
 
-For example:
+#### - docker volume prune
 
-```
-docker run -it -v <volume_name>:/data <image_name> /bin/bash
-```
-
-This command will mount the volume <volume_name> to the /data directory in the container. Any data written to the /data directory
-inside the container will be persisted in the volume on the host file system.
-
-### Bind Directory on a host as a Mount
-
-Bind mounts also aims to solve the same problem but in a complete different way.
-
-Using this way, user can mount a directory from the host file system into a container. Bind mounts have the same behavior as volumes, but
-are specified using a host path instead of a volume name. 
-
-For example, 
-
-```
-docker run -it -v <host_path>:<container_path> <image_name> /bin/bash
-```
-
+Remove Unused Volumes
 ## Key Differences between Volumes and Bind Directory on a host as a Mount
 
 Volumes are managed, created, mounted and deleted using the Docker API. However, Volumes are more flexible than bind mounts, as 
