@@ -1,1 +1,6 @@
+Multistage builds
+================
 
+Multistage builds have multiple stages in docker file and the end stage will produce the docker image with  minimalistic size
+
+Distroless : is a docker image which only contains runtime environment. SO it reduces the space by huge amount + he doesn't have any basic OS commands like ls, curl , wget so its not event exposed to any OS related vulnerabilities and its highly secured.
